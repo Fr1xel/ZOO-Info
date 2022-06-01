@@ -1,33 +1,5 @@
 const baseUrl = "https://zoo-animal-api.herokuapp.com/animals/rand/10"
-/*const posts = [
-    {id: 1, title: "Title 1", author:""},
-    {id: 2, title: "Title 2", author:""}
-]
-function getPosts() {
-    setTimeout(()=>{
-        let output = ""
-posts.forEach(post => {
-        output += `<li>${post.title}`
-    })
-    document.body.innerHTML = output
-    }, 2000)
-    
-}
 
-function createPost(post){
-    return new Promise((resolve, reject) =>{
-        setTimeout(()=>{
-            posts.push(post)
-            const error = false
-            if(!error){
-                resolve("I am resolved")
-            }
-            else{
-                reject("Error")
-            }
-        }, 2000)
-    })
-}*/
 function startSpiner(){
     const spiner = document.createElement("div")
     const img = document.createElement("img")
@@ -78,8 +50,6 @@ async function getUsers(){
     const data = await users.json().catch(err => console.log(err))
     if(data){
         stopSpiner(data)
-        console.log(data)
     }
 }
-//createPost({id: 3, title:"Title 3", author: ""}).then(getPosts).catch(err => console.log(err))//
 getUsers()
